@@ -13,7 +13,6 @@ for av in w:
     eww=requests.get(url).text
     json_text = json.loads(eww)
     print(json_text)
-        # 遍历JSON格式信息，获取视频aid
     aid_list.append(json_text["data"]['bvid'])
 f=open("a2b-output.txt", "w", encoding="utf-8")
 for i in aid_list:

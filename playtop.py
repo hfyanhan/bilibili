@@ -102,16 +102,6 @@ def  topm():
         print('正在写入....{}'.format(path + ".txt"))
         www=0
         for index, res in enumerate(result_list):
-        #print("排名：{}".format(index + 1))
-        #print("AV号：{}".format(res[0]))
-        #print("作者：{}".format(res[1]))
-        #print("投币数：{}".format(res[2]))
-        #print("长度：{}".format(res[3]))
-        #print("mid：{}".format(res[4]))
-        #print("播放量：{}".format(res[6]))
-        #print("综合评分：{}".format(res[7]))
-        #print("标题：{}".format(res[8]))
-        #print("-" * 90)
             f.write("排名：{}\n".format(index + 1))
             f.write("AV号：{}\n".format(res[0]))
             f.write("BV号：{}\n".format(res[1]))
