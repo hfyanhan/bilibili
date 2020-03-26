@@ -21,7 +21,7 @@ def parsePage(text,av):
             key = eval(keyStr[0].split(':')[1])
         commentUrl = 'https://comment.bilibili.com/' + str(key) + '.xml'  # 弹幕存储地址
         print("再一次")
-        commentText=submit(commentUrl,0)
+        commentText=we+'\n'+submit(commentUrl,0)
         s='./'+we+'/'+av
         wrhtml(commentText,s,1,"xml")
     except:

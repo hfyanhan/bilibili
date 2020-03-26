@@ -7,6 +7,7 @@ while decwww<=4:
         a=time.strftime("%Y-%m-%d-%H-%M-%S",time.localtime())
         r=requests.get('https://www.bilibili.com/video/online.html')
         se=r.text
+        se=a+se
         filn=a+"-online.html"
         f=open(filn,mode="w",encoding="utf-8")
         f.write(se)

@@ -9,7 +9,7 @@ import os
 from json import loads
 import time
 
-import funcbili
+from funcbili import realine,submit
 # B站API详情 https://github.com/Vespa314/bilibili-api/blob/master/api.md
 
 # 视频AV号列表
@@ -19,6 +19,9 @@ a=time.strftime("%Y-%m-%d",time.localtime())+'p'
 
 # 获取一个AV号视频下所有评论
 def getAllCommentList(item):
+    filename = './'+a+'/'+str(item) + ".txt"
+    f=open(filename, "a", encoding='utf-8')
+    f.write(a)
     url = "http://api.bilibili.com/x/reply?type=1&oid=" + str(item) + "&pn=1&nohot=1&sort=0"
     r = requests.get(url)
     numtext = r.text

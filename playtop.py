@@ -99,6 +99,7 @@ def  topm():
                                                      rookie_dic.get(url[1][1]) or all_or_origin_dic.get(url[1][1]),
                                                      day_dic.get(url[1][2])))
         f = open(path + ".txt", "a", encoding="utf-8")
+        f.write(a)
         print('正在写入....{}'.format(path + ".txt"))
         www=0
         for index, res in enumerate(result_list):
