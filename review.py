@@ -30,7 +30,7 @@ def getAllCommentList(item):
     page = commentsNum // 20 + 1
     for n in range(1,page):
         url = "https://api.bilibili.com/x/v2/reply?jsonp=jsonp&pn="+str(n)+"&type=1&oid="+str(item)+"&sort=1&nohot=1"
-        text = submit(url,2)
+        text = submit(url,2,0)
         filename = './'+a+'/'+str(item) + ".txt"
         f=open(filename, "a", encoding='utf-8')
         f.write(text)

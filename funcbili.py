@@ -5,15 +5,16 @@ def isexist(s):
        return 0
     f.close()
     return 1
-def submit(htm,sleept):
+def submit(htm,sleept,flag):
     import requests,time
     while 1:
         der=0
         try:
             r=requests.get(htm)
             r.raise_for_status()
-            r.encoding=r.apparent_encoding
-        except:
+            if flag==1:
+                r.encoding=r.apparent_encoding
+        except Exception :
             print("获取Url失败,继续尝试")
             time.sleep(sleept)
             der=3
